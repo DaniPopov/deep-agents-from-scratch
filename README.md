@@ -1,6 +1,8 @@
 # 🧱 Deep Agents from Scratch
 
-<img width="720" height="289" alt="Screenshot 2025-08-12 at 2 13 54 PM" src="https://github.com/user-attachments/assets/90e5a7a3-7e88-4cbe-98f6-5b2581c94036" />
+> **Note:** This repository is forked from [langchain-ai/deep_agents_from_scratch](https://github.com/langchain-ai/deep_agents_from_scratch) with custom implementations and additional agent variants in the `src/dani_deep_agents/` directory.
+
+<img width="720" height="289" alt="Screenshot 2025-08-12 at 2 13 54 PM" src="https://github.com/user-attachments/assets/90e5a7a3-7e88-4cbe-98f6-5b2581c94036" />
 
 [Deep Research](https://academy.langchain.com/courses/deep-research-with-langgraph) broke out as one of the first major agent use-cases along with coding. Now, we've seeing an emergence of general purpose agents that can be used for a wide range of tasks. For example, [Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) has gained significant attention and popularity for long-horizon tasks; the average Manus task uses ~50 tool calls!. As a second example, Claude Code is being used generally for tasks beyond coding. Careful review of the [context engineering patterns](https://docs.google.com/presentation/d/16aaXLu40GugY-kOpqDU4e-S0hD1FmHcNyF0rRRnb1OU/edit?slide=id.p#slide=id.p) across these popular "deep" agents shows some common approaches:
 
@@ -8,9 +10,9 @@
 * **Context offloading to file systems**
 * **Context isolation through sub-agent delegation**
 
-This course will show how to implement these patterns from scratch using LangGraph! 
+This course will show how to implement these patterns from scratch using LangGraph!
 
-## 🚀 Quickstart 
+## 🚀 Quickstart
 
 ### Prerequisites
 
@@ -30,8 +32,8 @@ export PATH="/Users/$USER/.local/bin:$PATH"
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/langchain-ai/deep_agents_from_scratch
-cd deep_agents_from_scratch
+git clone https://github.com/DaniPopov/deep-agents-from-scratch
+cd deep-agents-from-scratch
 ```
 
 2. Install the package and dependencies (this automatically creates and manages the virtual environment):
@@ -81,7 +83,7 @@ Learn how to use the create_agent component. This component,
 
 ### `1_todo.ipynb` - Task Planning Foundations
 Learn to implement structured task planning using TODO lists. This notebook introduces:
-- Task tracking with status management (pending/in_progress/completed)  
+- Task tracking with status management (pending/in_progress/completed)
 - Progress monitoring and context management
 - The `write_todos()` tool for organizing complex multi-step workflows
 - Best practices for maintaining focus and preventing task drift
@@ -107,4 +109,19 @@ Combine all techniques into a production-ready research agent:
 - Content summarization and strategic thinking tools
 - Complete workflow for complex research tasks with LangGraph Studio integration
 
-Each notebook builds on the previous concepts, culminating in a sophisticated agent architecture capable of handling real-world research and analysis tasks. 
+Each notebook builds on the previous concepts, culminating in a sophisticated agent architecture capable of handling real-world research and analysis tasks.
+
+## 🔧 Custom Implementations
+
+This fork includes additional agent implementations in `src/dani_deep_agents/`:
+
+- **`basic_react_agent_0/`**: Foundation ReAct agent implementation
+- **`deep_agent_1/`**: Agent with TODO list capabilities
+- **`deep_agent_2/`**: Agent with virtual file system tools
+- **`deep_agent_3/`**: Full-featured agent with subagent spawning and task delegation
+
+These implementations complement the tutorial notebooks and demonstrate practical agent architectures.
+
+## 📝 Credits
+
+Original course and materials by [LangChain AI](https://github.com/langchain-ai/deep_agents_from_scratch). Custom implementations and extensions by [DaniPopov](https://github.com/DaniPopov).
